@@ -1,17 +1,37 @@
-# expense_tracker_app
+# Expense Tracker App (Flutter)
 
-A new Flutter project.
+A responsive personal finance and expense tracking mobile app built with Flutter. Record income and expenses, manage budgets and visualise your spending with charts. Data is stored locally on the device.
+
+## Features
+- Splash screen, login and register screens
+- Dashboard with balance card
+- Add and browse transactions
+- Budgets and categories
+- Analytics screen with charts (`fl_chart`)
+- Profile screen
+- Offline local storage with Hive
+
+## Tech Stack
+- Flutter (Dart SDK >=3.4)
+- State management: `provider`
+- Storage: `hive`, `hive_flutter`, `shared_preferences`
+- Charts: `fl_chart`; fonts: `google_fonts`; formatting: `intl`
+
+## Project Structure
+```
+lib/
+├── main.dart, app.dart, routes.dart
+├── models/      # budget, category, transaction
+├── screens/     # splash, auth, dashboard, transactions, analytics, profile
+├── services/    # database_service (Hive)
+├── utils/       # colors, constants
+└── widgets/     # balance card, buttons, text fields, transaction tile
+```
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Requires the [Flutter SDK](https://docs.flutter.dev/get-started/install).
+```bash
+flutter pub get
+flutter run
+```
+Targets Android and iOS.
